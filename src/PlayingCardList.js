@@ -1,7 +1,7 @@
 import React from 'react';
 import uuid from 'uuid';
 import PlayingCard from './PlayingCard';
-import useAxios from './hooks/useAxios'; // Make sure to provide the correct path
+import useAxios from './hooks/useAxios'; 
 
 import './PlayingCardList.css';
 
@@ -21,7 +21,7 @@ function PlayingCardList() {
         <button onClick={addCard}>Add a playing card!</button>
       </div>
       <div className="PlayingCardList-card-area">
-        {cardsData.map((cardData, index) => (
+        {cardsData.map((cardData) => (
           <PlayingCard key={uuid()} front={cardData.cards[0].image} />
         ))}
       </div>
